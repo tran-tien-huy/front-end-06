@@ -1,0 +1,49 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  width: 90rem;
+  height: 60rem;
+  background: blue;
+}
+
+.banner {
+  width: 80%;
+  height: 55%;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 auto;
+}
+.banner__item {
+  position: relative;
+  padding: 5rem;
+  width: 100%;
+  height: 100%;
+}
+.banner--skewed:before, .banner--normal:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner--skewed:before {
+  content: "";
+  background: black;
+  z-index: -2;
+}
+.banner--normal {
+  height: 40%;
+  background: cyan;
+}
+.banner--normal:before {
+  content: "";
+  background: cyan;
+  transform-origin: top left;
+  transform: skewY(-10deg);
+  z-index: -1;
+}
+
+/*# sourceMappingURL=ex_05.css.map */

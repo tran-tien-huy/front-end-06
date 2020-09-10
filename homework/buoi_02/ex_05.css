@@ -1,0 +1,23 @@
+[data-link^="https"] {
+	background: blue;
+}
+
+[data-link$=".vn"] {
+	background: green;
+}
+
+[data-name~="hello"] {
+	background: pink;
+}
+
+[data-name~="hello"] {
+	background: pink;
+}
+
+input[type="email"] {
+	background: black;
+}
+
+input[name="fullname"] {
+	background: red;
+}

@@ -1,0 +1,25 @@
+body {
+    font-size: 62.5%;
+}
+
+header, nav, footer {
+    font-size: 1rem
+}
+
+.hw-ex__list {
+    list-style: none;
+}
+.hw-ex__list-item {
+    display: inline-block;
+    border-bottom: 0.4rem solid rgb(0 0 0 / 20%);
+    background-color: rgba(25, 173, 179, 1);
+    color: white;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
+}
+.hw-ex-list-item__link {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 0.7rem 2rem;
+}

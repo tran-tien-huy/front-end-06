@@ -1,0 +1,57 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  width: 90rem;
+  height: 50rem;
+  background: rgba(201, 63, 59, 0.8);
+}
+
+.slider {
+  width: 65%;
+  height: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider:before {
+  content: "";
+  background: rgba(232, 224, 201, 0.68);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scale(1.07, 0.87);
+}
+.slider:after {
+  content: "";
+  background: rgba(232, 224, 201, 0.38);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  transform: scale(1.16, 0.7);
+}
+.slider__item {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5rem;
+  font-size: 1.7rem;
+  z-index: 1;
+}
+.slider:before, .slider:after, .slider__item {
+  border-radius: 0.8rem;
+}
+
+/*# sourceMappingURL=ex_04.css.map */

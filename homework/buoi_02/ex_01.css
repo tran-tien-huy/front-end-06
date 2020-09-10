@@ -1,0 +1,81 @@
+:root {
+    /* text variables */
+    --main-text-color: rgba(255,255,255,1);
+    --btn-ff:'Montserrat', sans-serif;
+
+    /* border radius */
+    --br: 0.5rem;
+    /* letter spacing */
+    --letter-space:0.25rem;
+
+    /* btn with and height */
+    --btn-w: 20rem;
+    --btn-h: 5rem;
+
+    /* Linear gradient variables */
+    --first-btn-gradient: linear-gradient(to right, #68ECAB, #4FCCC8);
+    --second-btn-gradient: linear-gradient(to right, #ACE4FE, #90CEF5, #6FB5ED);
+    --third-btn-gradient: linear-gradient(to right, #AFBDFE,#ADA4F7,#AC98F4);
+    --fourth-btn-gradient: linear-gradient(to right, #FFD69A, #FDA363);
+    --fifth-btn-gradient: linear-gradient(to right, #FEC4AE, #F59C91, #EE7774);
+    --sixth-btn-gradient: linear-gradient(to right, #FFABB9, #F891A5, #F589A0);
+
+    /* Box shadow variables */
+    --box-shadow-position: 0rem 1.4rem 2.1rem;
+    --first-box-shadow: var(--box-shadow-position) rgba(79, 204, 200, 0.37);
+    --second-box-shadow: var(--box-shadow-position) rgba(111, 181, 237, 0.37);
+    --third-box-shadow: var(--box-shadow-position) rgba(172, 152, 244, 0.45);
+    --fourth-box-shadow: var(--box-shadow-position) rgba(253, 163, 99, 0.37);
+    --fifth-box-shadow: var(--box-shadow-position) rgba(238, 119, 116, 0.37);
+    --sixth-box-shadow: var(--box-shadow-position) rgba(245, 137, 160, 0.5);
+}
+body {
+    font-family: var(--btn-ff);
+}
+.list-btn {
+    width: 100rem;
+    height: 100rem;
+    margin: 0 auto;
+}
+
+.list-btn__item {
+    border: none;
+    display: inline-block;
+    margin: 5rem;
+    width: var(--btn-w);
+    height: var(--btn-h);
+    border-radius: var(--br);
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-space);
+}
+
+.list-btn__item--1 {
+    background: var(--first-btn-gradient);
+    box-shadow: var(--first-box-shadow);
+}
+
+.list-btn__item--2 {
+    background: var(--second-btn-gradient);
+    box-shadow: var(--second-box-shadow);
+}
+
+.list-btn__item--3 {
+    background: var(--third-btn-gradient);
+    box-shadow: var(--third-box-shadow);
+}
+
+.list-btn__item--4 {
+    background: var(--fourth-btn-gradient);
+    box-shadow: var(--fourth-box-shadow);
+}
+
+.list-btn__item--5 {
+    background: var(--fifth-btn-gradient);
+    box-shadow: var(--fifth-box-shadow);
+}
+
+.list-btn__item--6 {
+    background: var(--sixth-btn-gradient);
+    box-shadow: var(--sixth-box-shadow);
+}

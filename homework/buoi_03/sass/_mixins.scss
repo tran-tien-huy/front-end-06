@@ -1,0 +1,27 @@
+@mixin calc_size($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin assign_bgc($color: black) {
+    background: $color;
+}
+
+@mixin position_center_X($position: relative) {
+    position: $position;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin position_center_Y($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin position_center($position: relative) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

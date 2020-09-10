@@ -1,0 +1,13 @@
+.ex-answer--fourth__desc .box{
+    max-width: 50rem;
+    background-color: #001aff8f;
+    border: 0.1rem solid rgb(255,255,0);
+    border-radius: 0.4rem;
+    font-size: 2rem;
+}
+
+.ex-answer--fourth__desc .box p {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}

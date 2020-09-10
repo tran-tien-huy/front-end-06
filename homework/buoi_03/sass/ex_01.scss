@@ -1,0 +1,113 @@
+// import _variable.scss
+@import "./variable";
+@import "./mixins";
+
+body {
+    font-size: $default-font-size;
+    @include assign_bgc($background-color-1);
+    @include calc_size(50rem, 50rem);
+}
+
+.dropdown {
+    @include calc_size(53%);
+    position: relative;
+    color: white;
+    top: 10%;
+    left: 50%;
+
+    &__item {
+        font-size: 1.1rem;
+        font-weight: $font-weight;
+        font-family: $default-font-family;
+        padding: 1.5rem;
+        @include assign_bgc($dropdown-menu-color);
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    }
+
+    &-title {
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+        border-radius: $dropdowm-item-border-radius;
+    }
+
+    &-list {
+        position: absolute;
+        top: 150%;
+        left: 0;
+        right: 0;
+        &__item {
+            position: relative;
+        }
+        &__item:hover {
+            @include assign_bgc($menu-hover-color);
+        }
+        &__item:first-child, &__item:last-child{
+            border-radius: $dropdowm-item-border-radius;
+        }
+        &__item:first-child {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &__item:last-child {
+            border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        // draw icon
+        &__icon {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            color: white;
+            transform: translate(-50%,-50%);
+        }
+
+
+
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s linear, opacity 0.4s linear;
+    }
+    // draw triangle
+    &-list:before {
+        content: "";
+        position: absolute;
+        border-bottom: 1.2rem solid $dropdown-menu-color;
+        border-top: 0.77rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-left: 1rem solid transparent;
+        top: -12%;
+        left: 4%;
+
+    }
+
+    &:hover .dropdown-list {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &-title:after{
+        content: "";
+        position: absolute;
+        border-bottom: 0.7rem solid transparent;
+        border-top: 0.5rem solid white;
+        border-right: 0.6rem solid transparent;
+        border-left: 0.6rem solid transparent;
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%,-25%);
+        transition: 0.4s linear;
+    }
+    &-title:hover:after {
+        border-bottom: 0.5rem solid white;
+        border-top: 0.7rem solid transparent;
+        border-right: 0.6rem solid transparent;
+        border-left: 0.6rem solid transparent;
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%, -61%);
+    }
+}

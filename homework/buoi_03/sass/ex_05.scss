@@ -1,0 +1,51 @@
+@import "./variable";
+@import "./mixins";
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $default-font-size;
+    @include calc_size(90rem, 60rem);
+    @include assign_bgc(rgba(0,0,255,1));
+}
+
+.banner {
+    @include calc_size(80%, 55%);
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 auto;
+
+    &__item {
+        position: relative;
+        padding: 5rem;
+        @include calc_size(100%, 100%);
+    }
+
+    &--skewed:before, &--normal:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include calc_size(100%, 100%);
+    }
+
+    &--skewed:before {
+        content: "";
+        @include assign_bgc(black);
+        z-index: -2;
+    }
+
+    &--normal {
+        height: 40%;
+        @include assign_bgc(cyan);
+    }
+
+    &--normal:before {
+        content: "";
+        @include assign_bgc(cyan);
+        transform-origin: top left;
+        transform: skewY(-10deg);
+        z-index: -1;
+    }
+}

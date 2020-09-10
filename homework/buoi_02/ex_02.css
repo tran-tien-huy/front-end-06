@@ -1,0 +1,26 @@
+:root {
+    /* font family */
+    --ff:'Montserrat', sans-serif;
+
+    --fs: 20rem;
+    --fw: 800;
+    /* Linear gradient variables */
+    /* --first-btn-gradient: linear-gradient(to top left, #FF229F, #FFD66A); */
+    /* --first-btn-gradient: radial-gradient(circle farthest-corner at 0% 20%, #FFD66A 5%, 8%, #FF14A4 90%); */
+
+}
+body {
+    font-family: var(--ff);
+}
+
+.text-gradient {
+    font-size: var(--fs);
+    /* background: var(--first-btn-gradient); */
+    background: linear-gradient(to left top, #FF229F 50%, #FFD66A);
+    letter-spacing: 0.4rem;
+    /* -webkit-text-fill-color: transparent; */
+    color: transparent;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-weight: var(--fw);
+}
